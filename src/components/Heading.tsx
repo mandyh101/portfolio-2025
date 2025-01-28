@@ -1,32 +1,32 @@
-import React from "react";
+import React from 'react'
 
-import localFont from "next/font/local";
-import { twMerge } from "tailwind-merge";
+import localFont from 'next/font/local'
+import { twMerge } from 'tailwind-merge'
 
 // Font files can be colocated inside of `app`
-const CalSans = localFont({
-  src: [{ path: "../../fonts/CalSans-SemiBold.woff2" }],
-  display: "swap",
-});
+// const CalSans = localFont({
+//   src: [{ path: '../../fonts/CalSans-SemiBold.woff2' }],
+//   display: 'swap',
+// })
 
 export const Heading = ({
   className,
   children,
-  as: Tag = "h1",
+  as: Tag = 'h1',
 }: {
-  className?: string;
-  children: React.ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  className?: string
+  children: React.ReactNode
+  as?: keyof JSX.IntrinsicElements
 }) => {
   return (
     <Tag
       className={twMerge(
-        CalSans.className,
-        "text-base md:text-xl lg:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary",
+        // CalSans.className,
+        'text-6xl md:text-7xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-heading',
         className
       )}
     >
       {children}
     </Tag>
-  );
-};
+  )
+}

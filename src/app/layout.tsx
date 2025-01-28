@@ -1,13 +1,20 @@
 import { Sidebar } from '@/components/Sidebar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Raleway, Inter } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
 import { Footer } from '@/components/Footer'
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-raleway',
+})
 
 const inter = Inter({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
@@ -25,7 +32,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          inter.className,
+          // inter.className,
+          raleway.variable,
+          inter.variable,
           'flex antialiased h-screen overflow-hidden bg-gray-100'
         )}
       >
