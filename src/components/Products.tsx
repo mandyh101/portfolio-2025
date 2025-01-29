@@ -1,16 +1,20 @@
-"use client";
-import React from "react";
-import { Heading } from "./Heading";
-import { Product } from "@/types/products";
-import { products } from "@/constants/products";
-import Link from "next/link";
-import Image from "next/image";
-import { Paragraph } from "./Paragraph";
-import { motion } from "framer-motion";
+'use client'
+import React from 'react'
+import { Heading } from './Heading'
+import { Product } from '@/types/products'
+import { products } from '@/constants/products'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Paragraph } from './Paragraph'
+import { motion } from 'framer-motion'
 
 export const Products = () => {
   return (
-    <div>
+    <div className="section-padding">
+      {/* TODO move products heading into product component */}
+      <Heading as="h2" className="text-3xl md:text-4xl">
+        What I&apos;ve been working on
+      </Heading>
       <div className="grid grid-cols-1  gap-10">
         {products.map((product: Product, idx: number) => (
           <motion.div
@@ -65,5 +69,5 @@ export const Products = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}

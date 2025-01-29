@@ -1,20 +1,20 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import React from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export const Badge = ({
   text,
   href,
   ...props
 }: {
-  text: string;
-  href: string;
-  props?: React.ComponentProps<typeof Link>;
+  text: string
+  href: string
+  props?: React.ComponentProps<typeof Link>
 }) => {
   return (
     <Link
       href={href}
-      className="bg-slate-900 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block"
+      className="bg-slate-900 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white font-heading inline-block"
       {...props}
     >
       <span className="absolute inset-0 overflow-hidden rounded-full ">
@@ -43,5 +43,5 @@ export const Badge = ({
       </div>
       <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
     </Link>
-  );
-};
+  )
+}

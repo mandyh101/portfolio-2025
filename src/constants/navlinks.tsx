@@ -1,35 +1,35 @@
 import {
   IconArticle,
   IconBolt,
-  IconBriefcase2,
-  IconMail,
+  // IconBriefcase2,
+  // IconMail,
   IconMessage2,
-} from "@tabler/icons-react";
+} from '@tabler/icons-react'
 
 export const navlinks = [
   {
-    href: "/",
-    label: "Home",
+    href: '/',
+    label: 'Home',
     icon: IconBolt,
   },
   {
-    href: "/about",
-    label: "About",
+    href: '/about',
+    label: 'About me',
     icon: IconMessage2,
   },
+  // {
+  //   href: "/projects",
+  //   label: "Projects",
+  //   icon: IconBriefcase2,
+  // },
   {
-    href: "/projects",
-    label: "Projects",
-    icon: IconBriefcase2,
-  },
-  {
-    href: "/blog",
-    label: "Articles",
+    href: '/blog',
+    label: 'Notes',
     icon: IconArticle,
   },
-  {
-    href: "/contact",
-    label: "Contact",
-    icon: IconMail,
-  },
-];
+  // {
+  //   href: "/contact",
+  //   label: "Contact",
+  //   icon: IconMail,
+  // },
+]
