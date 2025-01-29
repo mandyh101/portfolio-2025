@@ -8,37 +8,31 @@ export const TechStack = () => {
   const stack = [
     {
       title: 'Laravel',
-      src: '/images/logos/next.png',
+      src: '/images/logos/laravel.svg',
 
       className: 'h-10 w-14',
     },
     {
       title: 'TypeScript',
-      src: '/images/logos/next.png',
+      src: '/images/logos/typescript.svg',
 
       className: 'h-10 w-14',
     },
     {
       title: 'React JS',
-      src: '/images/logos/aws.webp',
+      src: '/images/logos/react.svg',
 
       className: 'h-10 w-10',
     },
     {
       title: 'PHP',
-      src: '/images/logos/aws.webp',
+      src: '/images/logos/php.svg',
 
       className: 'h-10 w-10',
     },
     {
       title: 'Vue JS',
-      src: '/images/logos/aws.webp',
-
-      className: 'h-10 w-10',
-    },
-    {
-      title: 'Framer Motion',
-      src: '/images/logos/framer.webp',
+      src: '/images/logos/vue.svg',
 
       className: 'h-10 w-10',
     },
@@ -49,26 +43,32 @@ export const TechStack = () => {
       className: 'h-10 w-24',
     },
     {
+      title: 'Framer Motion',
+      src: '/images/logos/framer.webp',
+
+      className: 'h-10 w-10',
+    },
+    {
       title: 'Git',
-      src: '/images/logos/tailwind.png',
+      src: '/images/logos/git.svg',
 
       className: 'h-10 w-24',
     },
     {
       title: 'RESTful APIs',
-      src: '/images/logos/aws.webp',
+      src: '/images/logos/rest-api.png',
 
       className: 'h-10 w-10',
     },
     {
       title: 'MySQL',
-      src: '/images/logos/aws.webp',
+      src: '/images/logos/mysql.svg',
 
       className: 'h-10 w-10',
     },
     {
       title: 'Microsoft Azure',
-      src: '/images/logos/aws.webp',
+      src: '/images/logos/azure.svg',
 
       className: 'h-10 w-10',
     },
@@ -80,7 +80,7 @@ export const TechStack = () => {
     },
     {
       title: 'Miro',
-      src: '/images/logos/figma.png',
+      src: '/images/logos/miro.svg',
 
       className: 'h-10 w-8',
     },
@@ -94,16 +94,21 @@ export const TechStack = () => {
         On top of foundations of Javascript, CSS and HTML, below is a list of
         the tech that makes up my current workflows and stack.
       </Paragraph>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mt-8 space-y-6">
         {stack.map((item) => (
-          <Image
-            src={item.src}
+          <div
+            className="flex flex-col items-center justify-center mx-3 min-w-[100px]"
             key={item.src}
-            width={`200`}
-            height={`200`}
-            alt={item.title}
-            className={twMerge('object-contain mr-4 mb-4', item.className)}
-          />
+          >
+            <Image
+              src={item.src}
+              width={`200`}
+              height={`200`}
+              alt={item.title}
+              className={twMerge('object-contain', item.className)}
+            />
+            <p className="text-xs mt-2">{item.title}</p>
+          </div>
         ))}
       </div>
     </div>
