@@ -1,50 +1,46 @@
-import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
-import { SingleProduct } from "@/components/Product";
-import { Products } from "@/components/Products";
-import { products } from "@/constants/products";
-import { Product } from "@/types/products";
-import { Metadata } from "next";
-import Image from "next/image";
-import { redirect } from "next/navigation";
+import { Container } from '@/components/Container'
+import { SingleProject } from '@/components/Project'
+import { projects } from '@/constants/projects'
+import { Project } from '@/types/project'
+import { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 
 type Props = {
-  params: { slug: string };
-};
+  params: { slug: string }
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
-  const product = products.find((p) => p.slug === slug) as Product | undefined;
-  if (product) {
+  const slug = params.slug
+  const project = projects.find((p) => p.slug === slug) as Project | undefined
+  if (project) {
     return {
-      title: product.title,
-      description: product.description,
-    };
+      title: project.title,
+      description: project.description,
+    }
   } else {
     return {
-      title: "Projects | John Doe",
+      title:
+        'Projects | Mandy Hale | Web development | Digital sustainability | AI for good',
       description:
-        "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-    };
+        'Mandy Hale is a full stack web developer developer, laravel developer, and writes about digital sustainability and AI.',
+    }
   }
 }
 
 export default function SingleProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string }
 }) {
-  const slug = params.slug;
-  const product = products.find((p) => p.slug === slug);
+  const slug = params.slug
+  const project = projects.find((p) => p.slug === slug)
 
-  if (!product) {
-    redirect("/projects");
+  if (!project) {
+    redirect('/projects')
   }
   return (
     <Container>
-      <SingleProduct product={product} />
+      <SingleProject project={project} />
     </Container>
-  );
+  )
 }

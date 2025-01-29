@@ -27,4 +27,12 @@
   .section-padding{
     @apply py-8 sm:py-10 md:py-12 lg:py-14
    }
+
+   .h1{ 
+    @apply text-6xl md:text-7xl
+   }
+
+   .h2{
+    @apply text-3xl md:text-4xl;
+  }
 }
