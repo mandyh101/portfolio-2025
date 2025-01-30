@@ -74,7 +74,7 @@ export const Navigation = ({
           <link.icon
             className={twMerge(
               'h-4 w-4 flex-shrink-0',
-              isActive(link.href) && 'text-sky-500'
+              isActive(link.href) && 'text-tropical-indigo-600'
             )}
           />
           <span>{link.label}</span>
@@ -82,7 +82,7 @@ export const Navigation = ({
       ))}
 
       <Heading as="p" className="text-sm md:text-sm lg:text-sm pt-10 px-2">
-        Socials
+        Connect with me
       </Heading>
       {socials.map((link: Navlink) => (
         <Link
@@ -95,7 +95,7 @@ export const Navigation = ({
           <link.icon
             className={twMerge(
               'h-4 w-4 flex-shrink-0',
-              isActive(link.href) && 'text-sky-500'
+              isActive(link.href) && 'text-tropical-indigo-600'
             )}
           />
           <span>{link.label}</span>

@@ -14,7 +14,7 @@ export const navlinks = [
   },
   {
     href: '/about',
-    label: 'About me',
+    label: 'Working with me',
     icon: IconMessage2,
   },
   // {
