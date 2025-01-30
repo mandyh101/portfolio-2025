@@ -1,19 +1,24 @@
-"use client";
-import { Paragraph } from "@/components/Paragraph";
-import Image from "next/image";
+'use client'
+import { Paragraph } from '@/components/Paragraph'
+import Image from 'next/image'
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
-export default function About() {
+//create a props object
+type AboutProps = {
+  isAvailable?: Boolean
+}
+
+export default function About({ isAvailable = true }: AboutProps) {
   const images = [
-    "https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  ];
+    '/images/about/surfing2.jpg',
+    '/images/about/biking.jpg',
+    '/images/about/running.jpg',
+    // '/images/about/tramping.jpg',
+  ]
   return (
     <div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 my-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 my-12">
         {images.map((image, index) => (
           <motion.div
             key={image}
@@ -31,89 +36,77 @@ export default function About() {
           >
             <Image
               src={image}
-              width={200}
+              width={300}
               height={400}
-              alt="about"
-              className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
+              alt=""
+              className="rounded-sm object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
             />
           </motion.div>
         ))}
-        {/* 
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform -rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform -rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // /> */}
       </div>
-
-      <div className="max-w-4xl">
-        <Paragraph className=" mt-4">
-          Hey there, I&apos;m John Doe - a passionate developer, avid writer,
-          and a connoisseur of awesome design. Welcome to my corner of the
-          digital world!
+      <div className="space-y-4 my-4">
+        <div className="flex flex-row gap-2 items-center">
+          <div className="relative w-4 h-4">
+            <div
+              className={`h-4 w-4 rounded-full blur-sm ${
+                isAvailable
+                  ? 'bg-aquamarine-400 group-hover:bg-aquamarine-500'
+                  : 'bg-red-400 group-hover:bg-red-500'
+              }`}
+            />
+            {/* First pulse ring for rippling pulse effect */}
+            <div
+              className={`absolute -inset-2 rounded-full blur-sm animate-pulse ${
+                isAvailable ? 'bg-aquamarine-400/20' : 'bg-red-400/20'
+              }`}
+            />
+            {/* second pulse ring for rippling pulse effect  */}
+            <div
+              className={`absolute -inset-1 rounded-full blur-sm animate-pulse ${
+                isAvailable ? 'bg-aquamarine-300/30' : 'bg-red-400/30'
+              }`}
+            />
+          </div>
+          <p className="text-xl font-light">
+            {isAvailable ? 'Available ' : 'Unavailable '}
+            for work
+          </p>
+        </div>
+        <Paragraph>
+          Hi there, I&apos;m Mandy - a web developer on a mission to build
+          technology and solutions that have a{' '}
+          <span className="text-sea-green-700">positive impact</span> on people
+          and communities.
         </Paragraph>
-        <Paragraph className=" mt-4">
-          Since the early days of my journey, I&apos;ve been captivated by the
-          art of crafting exceptional digital experiences. As a developer, I
-          thrive on turning lines of code into functional and elegant solutions.
-          My goal is to not just create software, but to build digital marvels
-          that seamlessly merge form and function.
+        <Paragraph>
+          As a full-stack developer with a background in marketing and
+          communications, I bring a unique blend of human and technical skills
+          to every project, giving me an excellent ability to create
+          user-centered solutions. Based in Ōtautahi (Christchurch), Aotearoa
+          (New Zealand) and with extensive experience as a remote worker,
+          I&apos;m able to effectively collaborate across cross-functional teams
+          in hybrid and fully remote environments.
         </Paragraph>
-
-        <Paragraph className=" mt-4">
-          But my journey doesn&apos;t stop at coding. With a heart full of words
-          and a mind brimming with ideas, I&apos;ve ventured into the realm of
-          writing. From tech articles that unravel complex concepts to creative
-          tales that ignite the imagination, I weave words to inform, entertain,
-          and inspire.
+        <Paragraph>
+          My approach is built on three core values: challenge, collaboration
+          and communication. I thrive on challenge; complex problems are
+          opportunities for growth and new approaches. I believe good teamwork
+          is key for innovation, so collaboration and supporting colleagues to
+          achieve shared goals is important to me. I prioritise clear
+          communication to support alignment between goals, expectations and
+          outcomes through active listening, documentation, and establishing
+          feedback loops with clients and stakeholders.
         </Paragraph>
-        <Paragraph className=" mt-4">
-          What sets me apart is my unwavering appreciation for design. I believe
-          that aesthetics and usability go hand in hand. My eye for awesome
-          design ensures that every project I undertake not only works
-          flawlessly under the hood but also looks stunning on the surface.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Through this website, I aim to share my insights, experiences, and
-          creations with you. Whether you&apos;re a fellow developer seeking
-          solutions, a fellow writer in search of inspiration, or simply someone
-          who appreciates the finer aspects of design, there&apos;s something
-          here for you.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Join me on this journey of bytes and narratives, logic and creativity,
-          code and prose. Together, we can explore the boundless possibilities
-          of technology and storytelling, all while reveling in the sheer beauty
-          of thoughtful design.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Thank you for being here, and I can&apos;t wait to embark on this
-          adventure with you.
+        <Paragraph>
+          When I&apos;m not at my computer, you&apos;ll find me embracing the
+          outdoors as a water woman, mountain biker, and trail runner. I&apos;m
+          also a yoga teacher and actively contribute to my community as a
+          member of Climate Action Tech, Women in Tech Christchurch, and as a
+          volunteer Surf Life Guard at Taylors Mistake Surf Life Saving Club.
         </Paragraph>
       </div>
     </div>
-  );
+    // TODO add values and strengths here?
+    // TODO add call to actions
+  )
 }
