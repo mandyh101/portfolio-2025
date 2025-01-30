@@ -32,7 +32,11 @@ export const Projects = () => {
             <Link
               href={project.slug ? `/projects/${project.slug}` : project.href}
               key={project.href}
-              className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-tropical-indigo-100 bg-tropical-indigo-50 rounded-2xl transition duration-200 pt-4 shadow-sm"
+              className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 
+  bg-tropical-indigo-100
+  hover:bg-tropical-indigo-200 
+  rounded-2xl transition duration-200 pt-4 
+  shadow-md"
             >
               <Image
                 src={project.thumbnail}
@@ -54,7 +58,7 @@ export const Projects = () => {
                   {project.stack?.map((stack: string) => (
                     <span
                       key={stack}
-                      className="text-xs font-heading md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+                      className="text-xs font-heading md:text-sm bg-gray-50 px-2 py-1 rounded-sm text-secondary"
                     >
                       {stack}
                     </span>

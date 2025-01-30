@@ -43,16 +43,16 @@ const config: Config = {
           '900': '#0d5454',
           '950': '#003033', // headings and text with some pizazz
         },
-        // secondary
-        aquamarine: {
-          '50': '#eafff8',
-          '100': '#ccffeb',
-          '200': '#9efcdc',
-          '300': '#60f5cc', //default
-          '400': '#21e6b6', //hover
-          '500': '#00cda1', //active
-          '600': '#00a784', //probably never use
-        },
+        // // secondary
+        // aquamarine: {
+        //   '50': '#eafff8',
+        //   '100': '#ccffeb',
+        //   '200': '#9efcdc',
+        //   '300': '#60f5cc', //default
+        //   '400': '#21e6b6', //hover
+        //   '500': '#00cda1', //active
+        //   '600': '#00a784', //probably never use
+        // },
         //accent
         'tropical-indigo': {
           '50': '#f6f6fd',
