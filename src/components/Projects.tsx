@@ -47,7 +47,7 @@ export const Projects = () => {
               />
               <div className="flex flex-col justify-between">
                 <div>
-                  <Heading as="h4" className="text-lg md:text-lg lg:text-lg">
+                  <Heading as="h3" className="h3">
                     {project.title}
                   </Heading>
                   <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
