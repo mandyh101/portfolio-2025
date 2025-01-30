@@ -88,11 +88,11 @@ export const TechStack = () => {
   return (
     <div className="section-padding">
       <Heading as="h2" className="text-3xl md:text-4xl">
-        My favourite Tech and Tools
+        My favourite <span className="text-sea-green-600">Tech and Tools</span>
       </Heading>
       <Paragraph className="max-w-xl mt-4">
-        On top of foundations of Javascript, CSS and HTML, below is a list of
-        the tech that makes up my current workflows and stack.
+        On top of my foundations of Javascript, CSS and HTML, these are the
+        technologies that makes up my current workflows and stack.
       </Paragraph>
       <div className="flex flex-wrap mt-8 space-y-6">
         {stack.map((item) => (
