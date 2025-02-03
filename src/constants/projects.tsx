@@ -3,6 +3,7 @@ import volitionMock3 from 'public/images/projects/volition/volition-mock-3.png'
 import volitionHome from 'public/images/projects/volition/volition-home.png'
 import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup.png'
 import recipeMobileMock from 'public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
+import recipeGif from 'public/images/projects/recipe-app/recipe-app-gif.gif'
 
 export const projects = [
   {
@@ -85,7 +86,7 @@ export const projects = [
     description:
       'A recipe finder application using voice input (MDN Speech API) and a simple user interface.',
     thumbnail: recipeMobileMock,
-    images: [recipeMacMock, recipeMobileMock],
+    images: [recipeMacMock, recipeMobileMock, recipeGif],
     stack: ['React', 'Nextjs', 'Tailwindcss', 'Typescript', 'Vercel v0'],
     slug: 'voice-recipe-search-app',
     content: (
