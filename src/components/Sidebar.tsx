@@ -25,8 +25,8 @@ export const Sidebar = () => {
         onClick={() => setOpen(!open)}
       >
         <IconLayoutSidebarRightCollapse
-          className={`h-6 w-6 text-secondary ${
-            !open && 'rotate-180 duration-500'
+          className={`h-6 w-6 text-secondary transition duration-500 ${
+            !open ? 'rotate-180' : ''
           }`}
         />
         <span className="sr-only">
