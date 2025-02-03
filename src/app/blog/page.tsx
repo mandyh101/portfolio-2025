@@ -18,13 +18,15 @@ export default async function Blog() {
 
   return (
     <Container>
-      <span className="text-4xl">📝</span>
-      <Heading className="font-black pb-4">I write about technology</Heading>
+      <Heading className="h1 pb-4">Notes from my journey into tech</Heading>
       <Paragraph className="pb-10">
-        Ever since <Highlight> I was a kid</Highlight>, I&apos;ve been
-        fascinated by technology.
+        {' '}
+        I share my experiences navigating web development and AI without a
+        traditional technical background. No computer science degree to see
+        here. Just curiousity and a willingness to try some things.
       </Paragraph>
-      <Blogs blogs={data} />
+      {/* <Blogs blogs={data} /> */}
+      <Paragraph className="font-xl font-semibold">Coming soon!</Paragraph>
     </Container>
   )
 }
