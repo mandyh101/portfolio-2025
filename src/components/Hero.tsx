@@ -3,6 +3,7 @@ import React from 'react'
 import { Heading } from './Heading'
 import { Highlight } from '@/components/Highlight'
 import { Paragraph } from './Paragraph'
+import { Badge } from './Badge'
 
 export const Hero = () => {
   return (
@@ -24,7 +25,7 @@ export const Hero = () => {
           </Highlight>{' '}
           This diverse background helps me see technology from different
           perspectives, enabling me to empathise with users and build{' '}
-          <Highlight>intuitive, useful web solutions</Highlight>.
+          <Highlight>intuitive, user-centered web solutions</Highlight>.
         </Paragraph>
       </div>
     </div>

@@ -50,20 +50,20 @@ export default function About({ isAvailable = true }: AboutProps) {
             <div
               className={`h-4 w-4 rounded-full blur-sm ${
                 isAvailable
-                  ? 'bg-aquamarine-400 group-hover:bg-aquamarine-500'
+                  ? 'bg-sea-green-400 group-hover:bg-sea-green-500'
                   : 'bg-red-400 group-hover:bg-red-500'
               }`}
             />
             {/* First pulse ring for rippling pulse effect */}
             <div
               className={`absolute -inset-2 rounded-full blur-sm animate-pulse ${
-                isAvailable ? 'bg-aquamarine-400/20' : 'bg-red-400/20'
+                isAvailable ? 'bg-sea-green-400/20' : 'bg-red-400/20'
               }`}
             />
             {/* second pulse ring for rippling pulse effect  */}
             <div
               className={`absolute -inset-1 rounded-full blur-sm animate-pulse ${
-                isAvailable ? 'bg-aquamarine-300/30' : 'bg-red-400/30'
+                isAvailable ? 'bg-sea-green-300/30' : 'bg-red-400/30'
               }`}
             />
           </div>

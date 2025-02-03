@@ -35,12 +35,12 @@ export default function RootLayout({
           // inter.className,
           raleway.variable,
           inter.variable,
-          'flex antialiased h-screen overflow-hidden bg-gray-100'
+          'flex antialiased h-screen overflow-hidden bg-seasalt-white'
         )}
       >
         <Sidebar />
-        <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
-          <div className="flex-1 bg-seasalt-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
+        <div className="lg:pl-2 lg:pt-2 flex-1 overflow-y-auto">
+          <div className="flex-1 bg-seasalt-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto ml-[3rem] md:ml-[2rem] lg:ml-0">
             {children}
             <Footer />
           </div>

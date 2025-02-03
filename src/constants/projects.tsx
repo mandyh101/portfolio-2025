@@ -140,11 +140,13 @@ export const projects = [
           </li>
         </ul>
         <p>
-          Please note to use this app, it&apos;s best to open the preview link
-          in Chrome or Safari for compatibility with MDN Web Speech API. For
-          feedback or ideas for improvement, get in touch with me.{' '}
+          For feedback or ideas for improvement, get in touch with me.{' '}
+          <span className="font-xl text-sea-green-800">Happy cooking!</span>
         </p>
-        <p className="font-xl text-sea-green-800">Happy cooking!</p>
+        <p className="text-orange-600">
+          Please note to use this app, it&apos;s best to open the preview link
+          in Chrome or Safari for compatibility with MDN Web Speech API.{' '}
+        </p>
       </div>
     ),
   },
