@@ -19,3 +19,9 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Todo list
+- [ ] complete blog page layout
+- [ ] add resume/work experiences page
+- [ ] investigate github live integration 
+- [ ] add my strengths cards to my about page.
