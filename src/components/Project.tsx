@@ -25,14 +25,14 @@ export const SingleProject = ({ project }: { project: Project }) => {
           duration: 0.5,
         }}
         key={project.slug}
-        className="relative"
+        className="relative rounded-md overflow-hidden"
       >
         <Image
           src={activeImage}
           alt="thumbnail"
           height="1000"
           width="1000"
-          className="rounded-md object-contain"
+          className="rounded-md object-contain max-h-[600px]"
         />
         <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </motion.div>
@@ -53,8 +53,8 @@ export const SingleProject = ({ project }: { project: Project }) => {
         ))}
       </div>
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
-        <Heading className="h1"> {project.title}</Heading>
-        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+        <Heading className="h1 py-4"> {project.title}</Heading>
+        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0 self-end">
           {project.stack?.map((stack: string) => (
             <span
               key={stack}
