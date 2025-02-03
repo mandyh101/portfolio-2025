@@ -56,7 +56,7 @@ export const SingleProject = ({ project }: { project: Project }) => {
       </div>
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="h1 py-4"> {project.title}</Heading>
-        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0 self-end">
+        <div className="flex flex-wrap gap-4 md:mb-1 mt-2 md:mt-0 lg:self-end">
           {project.stack?.map((stack: string) => (
             <span
               key={stack}
