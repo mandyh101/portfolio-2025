@@ -1,21 +1,24 @@
 import {
   IconArticle,
   IconBolt,
+  IconHome,
   // IconBriefcase2,
   IconMail,
   IconMessage2,
+  IconPencil,
+  IconUser,
 } from '@tabler/icons-react'
 
 export const navlinks = [
   {
     href: '/',
     label: 'Home',
-    icon: IconBolt,
+    icon: IconHome,
   },
   {
     href: '/about',
     label: 'Working with me',
-    icon: IconMessage2,
+    icon: IconBolt,
   },
   // {
   //   href: "/projects",
@@ -25,7 +28,7 @@ export const navlinks = [
   {
     href: '/blog', //todo update to blog when ready to publish page
     label: 'Blog - coming soon!',
-    icon: IconArticle,
+    icon: IconPencil,
   },
   // {
   //   href: '/contact',
