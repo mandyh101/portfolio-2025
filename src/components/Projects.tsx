@@ -45,7 +45,7 @@ export const Projects = () => {
                 width="200"
                 className="rounded-md"
               />
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col justify-between p-2 md:p-0">
                 <div>
                   <Heading as="h3" className="h3">
                     {project.title}
@@ -54,7 +54,7 @@ export const Projects = () => {
                     {project.description}
                   </Paragraph>
                 </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+                <div className="flex gap-2 mt-2 md:mb-1 md:mt-0 flex-wrap">
                   {project.stack?.map((stack: string) => (
                     <span
                       key={stack}
