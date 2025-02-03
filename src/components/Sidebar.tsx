@@ -72,7 +72,6 @@ export const Navigation = ({
   const pathname = usePathname()
 
   const isActive = (href: string) => pathname === href
-  console.log(isActive('/'))
 
   return (
     <div
