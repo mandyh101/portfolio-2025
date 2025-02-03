@@ -1,5 +1,8 @@
-import volitionLogo from 'public/images/projects/volition/voliton-logomark.svg'
-import volitionBetaTesting from 'public/images/projects/volition/volition-beta-testing.png'
+import volitionMock2 from 'public/images/projects/volition/volition-mock-2.png'
+import volitionMock3 from 'public/images/projects/volition/volition-mock-3.png'
+import volitionHome from 'public/images/projects/volition/volition-home.png'
+import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup.png'
+import recipeMobileMock from 'public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
 
 export const projects = [
   {
@@ -7,8 +10,8 @@ export const projects = [
     title: 'Volition',
     description:
       'I joined start-up Volition, as a volunteer frontend developer to help launch their app. Volition is an accessible tool built to support the decision-making capability of disabled people and their supporters.',
-    thumbnail: volitionLogo,
-    images: [volitionLogo, volitionBetaTesting],
+    thumbnail: volitionHome,
+    images: [volitionHome, volitionMock2, volitionMock3],
     stack: [
       'React',
       'Typescript',
@@ -76,19 +79,75 @@ export const projects = [
     ),
     cta: 'Learn more about Volition',
   },
-  // {
-  //   href: "",
-  //   title: "Voice-based recipe search engine,
-  //   description:
-  //     "Search for recipes using voice input and a simple user interface.",
-  //   thumbnail: sidefolioAlgochurn,
-  //   images: [sidefolioAlgochurn, sidefolioAlgochurn2],
-  //   stack: ["Nextjs", "Tailwindcss", "Typescript", "Vercel v0", "AI" ],
-  //   slug: "algochurn",
-  //   content: (
-  //
-  //   ),
-  // },
+  {
+    href: 'https://voice-recipe-search-app.vercel.app/',
+    title: 'Voice-based recipe search engine',
+    description:
+      'A recipe finder application using voice input (MDN Speech API) and a simple user interface.',
+    thumbnail: recipeMobileMock,
+    images: [recipeMacMock, recipeMobileMock],
+    stack: ['React', 'Nextjs', 'Tailwindcss', 'Typescript', 'Vercel v0'],
+    slug: 'voice-recipe-search-app',
+    content: (
+      <div>
+        <p>
+          The Voice Recipe Search Engine is a simple web application that uses
+          the Web Speech API to enable hands-free recipe discovery for home
+          cooks. Built with React, NextJS, and TypeScript, this project
+          demonstrates a modern approach to solving a common kitchen challenge:
+          finding recipes while your hands are occupied or messy.
+        </p>
+        <p>
+          Guided by my pain points in the kitchen, the application features a
+          clean, mobile-responsive interface, voice-to-search functionality, and
+          a fallback text-to-search input. The technical stack showcases my
+          proficiency in modern web development practices, including TypeScript
+          for type safety, Tailwind CSS for responsive styling, and Vercel for
+          deployment.
+        </p>
+        <p>
+          This project not only serves as a practical tool for cooking
+          enthusiasts - it also allowed me to explore different web technologies
+          and AI-assisted development. Some of the interesting technical
+          challenges in my development process for this app included:
+        </p>
+        <ul>
+          <li>
+            Configuring the Web Speech API and understanding its limitations.
+          </li>
+          <li>
+            Learning to work with Vercel v0 AI UI generator and then optimising
+            the user interface for different states, mobile browsers, and
+            aesthetics.
+          </li>
+          <li>
+            Implementing a state-managed interface that allows smooth
+            transitions between recipe listings and detailed views
+          </li>
+        </ul>
+        <p>
+          Some of the future enhancements that I would love to explore on the
+          roadmap for this application include:
+        </p>
+        <ul>
+          <li>
+            adding a user feedback system for user-driven feature development;
+            and
+          </li>
+          <li>
+            expanding the accessibility features to create a more inclusive
+            cooking companion.
+          </li>
+        </ul>
+        <p>
+          Please note to use this app, it&apos;s best to open the preview link
+          in Chrome or Safari for compatibility with MDN Web Speech API. For
+          feedback or ideas for improvement, get in touch with me.{' '}
+        </p>
+        <p className="font-xl text-sea-green-800">Happy cooking!</p>
+      </div>
+    ),
+  },
   // {
   //   href: "https://gomoonbeam.com",
   //   title: "Moonbeam",

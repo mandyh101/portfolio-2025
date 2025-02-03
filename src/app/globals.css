@@ -21,7 +21,11 @@
   }
 
   p {
-    @apply font-sans text-lg font-bold;
+    @apply font-sans text-lg;
+  }
+
+  li{
+    @apply font-sans text-lg;
   }
 
   .section-padding{
