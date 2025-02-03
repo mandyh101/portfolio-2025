@@ -20,9 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   } else {
     return {
       // TODO one day add digital sustainability and AI to the meta data and my things!!
-      title: 'Projects | Mandy Hale | Web development',
+      title:
+        'Projects | Mandy Hale | Web development | laravel | react | typescript',
       description:
-        'Mandy Hale is a full stack web developer, laravel developer, and likes to wrote about technology, innovation and being human in a digital world.',
+        'Mandy Hale is a full stack web developer and likes to write about technology, innovation and being human in a digital world.',
     }
   }
 }

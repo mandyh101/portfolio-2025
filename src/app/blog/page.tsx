@@ -2,15 +2,14 @@ import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
 import { Highlight } from '@/components/Highlight'
 import { Paragraph } from '@/components/Paragraph'
-import { Products } from '@/components/Projects'
 import { getAllBlogs } from '../../../lib/getAllBlogs'
 import { Blogs } from '@/components/Blogs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blogs | John Doe',
+  title: 'Blogs | Mandy Hale | Web development | laravel | react | typescript',
   description:
-    'John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.',
+    'Mandy Hale is a full stack web developer and likes to write about technology, innovation and being human in a digital world.',
 }
 
 export default async function Blog() {

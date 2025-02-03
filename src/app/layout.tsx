@@ -18,9 +18,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Mandy Hale - Web developer, writer, innovator',
+  title: 'Mandy Hale - Web developer | laravel | react | typescript',
   description:
-    'Mandy Hale is a full stack laravel developer who loves to read and write about the latest technology and digital sustainability.',
+    'Mandy Hale is a full stack developer who loves to read and write about the latest technology and digital sustainability.',
 }
 
 export default function RootLayout({

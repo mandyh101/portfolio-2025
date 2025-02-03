@@ -2,17 +2,17 @@ import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
 import { Highlight } from '@/components/Highlight'
 import { Paragraph } from '@/components/Paragraph'
-import { Products } from '@/components/Projects'
+import { Projects } from '@/components/Projects'
 import { Metadata } from 'next'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Projects | John Doe',
+  title:
+    'Projects | Mandy Hale | Web development | laravel | react | typescript',
   description:
-    'John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.',
+    'Mandy Hale is a full stack web developer and likes to write about technology, innovation and being human in a digital world.',
 }
 
-export default function Projects() {
+export default function ProjectPage() {
   return (
     <Container>
       <span className="text-4xl">⚡</span>
@@ -21,7 +21,7 @@ export default function Projects() {
         What I&apos;ve been working on
       </Heading>
 
-      <Products />
+      <Projects />
     </Container>
   )
 }

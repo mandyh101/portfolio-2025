@@ -5,9 +5,9 @@ import { Metadata } from 'next'
 import About from '@/components/About'
 
 export const metadata: Metadata = {
-  title: 'About | Mandy Hale',
+  title: 'About | Mandy Hale | Web development | laravel | react | typescript',
   description:
-    'Laravel, react, typescript developer. I write about digital sustainability and AI.',
+    'Mandy Hale is a full stack web developer and likes to write about technology, innovation and being human in a digital world.',
 }
 
 export default function AboutPage() {
