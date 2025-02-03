@@ -4,7 +4,7 @@ import { Navlink } from '@/types/navlink'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Heading } from './Heading'
 import { socials } from '@/constants/socials'
@@ -14,7 +14,12 @@ import { IconLayoutSidebarRightCollapse } from '@tabler/icons-react'
 import { isMobile } from '@/lib/utils'
 
 export const Sidebar = () => {
-  const [open, setOpen] = useState(isMobile() ? false : true)
+  const [open, setOpen] = useState(true)
+
+  // Update the state after component mounts on client side to prevent hydration mismatch and close the sidebar by default when on mobile devices
+  useEffect(() => {
+    setOpen(!isMobile())
+  }, [])
 
   return (
     <>
@@ -131,8 +136,8 @@ const SidebarHeader = ({ open }: { open: boolean }) => {
   return (
     <div className={`flex space-x-2 ${!open && 'pt-4 mx-auto'}`}>
       <div
-        className={`w-14 h-14 overflow-hidden rounded-full ${
-          !open && 'mx-auto w-fit h-fit'
+        className={`overflow-hidden rounded-full ${
+          !open ? 'mx-auto w-10 h-10' : 'w-14 h-14'
         }`}
       >
         <Image
