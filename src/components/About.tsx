@@ -1,8 +1,9 @@
 'use client'
 import { Paragraph } from '@/components/Paragraph'
 import Image from 'next/image'
-
 import { motion } from 'framer-motion'
+import { Heading } from './Heading'
+import { Badge } from './Badge'
 
 //create a props object
 type AboutProps = {
@@ -14,7 +15,6 @@ export default function About({ isAvailable = true }: AboutProps) {
     '/images/about/surfing2.jpg',
     '/images/about/biking.jpg',
     '/images/about/running.jpg',
-    // '/images/about/tramping.jpg',
   ]
   return (
     <div>
@@ -79,24 +79,41 @@ export default function About({ isAvailable = true }: AboutProps) {
           and communities.
         </Paragraph>
         <Paragraph>
-          As a full-stack developer with a background in marketing and
-          communications, I bring a unique blend of human and technical skills
-          to every project, giving me an excellent ability to create
-          user-centered solutions. Based in Ōtautahi (Christchurch), Aotearoa
-          (New Zealand) and with extensive experience as a remote worker,
-          I&apos;m able to effectively collaborate across cross-functional teams
-          in hybrid and fully remote environments.
+          With a non-traditional path into full-stack development, I bring a
+          unique blend of human and technical skills to every project. My
+          experience in web development, marketing, and communications has
+          shaped how I see technology—through the lens of a developer, a
+          communicator focused on understanding the user, and a relationship
+          builder who values collaboration. These perspectives drive me to
+          create solutions that are intuitive and user-centered. Based in
+          Ōtautahi (Christchurch), Aotearoa (New Zealand) and with extensive
+          experience as a remote worker, I&apos;m able to effectively
+          collaborate across cross-functional teams across hybrid and fully
+          remote environments.
         </Paragraph>
         <Paragraph>
-          My approach is built on three core values: challenge, collaboration
-          and communication. I thrive on challenge; complex problems are
-          opportunities for growth and new approaches. I believe good teamwork
-          is key for innovation, so collaboration and supporting colleagues to
-          achieve shared goals is important to me. I prioritise clear
-          communication to support alignment between goals, expectations and
-          outcomes through active listening, documentation, and establishing
-          feedback loops with clients and stakeholders.
+          My approach is built on three core values: growth, collaboration, and
+          communication. I thrive in challenging environments where I can learn
+          from and be inspired by others—seeing complex problems as
+          opportunities for continuous improvement and innovation. I believe
+          strong teamwork drives success, so I prioritise collaboration and aim
+          to support colleagues in achieving shared goals. Clear communication
+          is essential for alignment across teams, goals, and outcomes, ensuring
+          everyone is included in the development journey. I achieve this
+          through active listening, documentation, and establishing feedback
+          loops with clients and stakeholders.
         </Paragraph>
+        <Paragraph className="font-semibold">
+          I&apos;m always keen to chat tech and hear about new opportunities and
+          projects. If you&apos;re looking for a collaborator or someone to join
+          your team please get in touch!
+        </Paragraph>
+        <Badge href="mailto:mandyhale10@gmail.com" text="Send me an email" />
+      </div>
+      <div className="space-y-4 my-4">
+        <Heading as="h2" className="h2 pt-4 text-sea-green-800">
+          Out of office
+        </Heading>
         <Paragraph>
           When I&apos;m not at my computer, you&apos;ll find me embracing the
           outdoors as a water woman, mountain biker, and trail runner. I&apos;m
@@ -106,7 +123,5 @@ export default function About({ isAvailable = true }: AboutProps) {
         </Paragraph>
       </div>
     </div>
-    // TODO add values and strengths here?
-    // TODO add call to actions
   )
 }
