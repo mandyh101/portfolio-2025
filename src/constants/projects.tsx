@@ -1,16 +1,15 @@
-import volitionMock2 from 'public/images/projects/volition/volition-mock-2.png'
-import volitionMock3 from 'public/images/projects/volition/volition-mock-3.png'
-import volitionHome from 'public/images/projects/volition/volition-home.png'
-import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup.png'
+import volitionMock2 from 'public/images/projects/volition/volition-mock-2-min.png'
+import volitionMock3 from 'public/images/projects/volition/volition-mock-3-min.png'
+import volitionHome from 'public/images/projects/volition/volition-home-min.png'
+import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup1.png'
 import recipeMobileMock from 'public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
-import recipeGif from 'public/images/projects/recipe-app/recipe-app-gif.gif'
 
 export const projects = [
   {
     href: 'https://www.volition.org.nz/about',
     title: 'Volition',
     description:
-      'I joined start-up Volition, as a volunteer frontend developer to help launch their app. Volition is an accessible tool built to support the decision-making capability of disabled people and their supporters.',
+      'I joined start-up Volition, as a frontend developer to help launch their app. Volition is an accessible tool built to support and empower the decision-making capability of disabled people and their supporters.',
     thumbnail: volitionHome,
     images: [volitionHome, volitionMock2, volitionMock3],
     stack: [
@@ -29,12 +28,18 @@ export const projects = [
           As a front-end developer at Volition, I contributed to launching the
           Volition app, a tool for supported decision-making. Volition&apos;s
           core purpose is to champion supported decision-making through an
-          innovative multi-media app that empowers people with disabilities to
+          innovative multimedia app that empowers people with disabilities to
           collaborate with their supporters and direct their own decisions,
-          services, and lives. Working within an agile and remote team
-          environment, I helped transform Figma designs into functional
-          React/TypeScript components, contributing to the team successfully
-          launching the MVP in January 2025.{' '}
+          services, and lives. I was excited to join Volition, drawn by both
+          their mission and the opportunity to deepen my expertise in web
+          accessibility. Working in an agile, remote team environment, I helped
+          transform Figma designs into functional React/TypeScript components,
+          contributing to the launch of the Beta version of the app in January
+          2025. The full product launch is{' '}
+          <a href="https://www.linkedin.com/posts/volitionsolutions_volition-supporteddecisionmaking-disabilitysupport-activity-7292013985799778304-fhhU">
+            scheduled
+          </a>{' '}
+          for March 2025.
         </p>
         <p>
           One of the most significant technical challenges I tackled during this
@@ -62,19 +67,17 @@ export const projects = [
           technology that makes a meaningful difference in people&apos;s lives.
           The experience helped me hone my skills in web accessibility and
           highlighted how thoughtful technical implementation can directly
-          enhance the user experience for everyone. Digital accessibility is
-          more than just a feature – it&apos;s a fundamental right. The
-          knowledge and expertise I gained during this project have equipped me
-          to create more accessible web applications in the future.
+          enhance the user experience for everyone. I believe digital
+          accessibility is more than just a feature – it&apos;s a fundamental
+          right. The knowledge and expertise I gained during this project has
+          equipped me to prioritise and implement web accessibility best
+          practices in my future projects.
         </p>{' '}
         <p>
           I&apos;m grateful for the connections I made with the team that came
-          together to support this part of Volitions&apos; journey and I look
-          forward to contributing more in the future.
-        </p>
-        <p>
-          Due to confidentiality agreements, I can only share high-level details
-          about my work with Volition at this time.
+          together to support this part of Volitions&apos; journey, the
+          opportunity to contribute to building technology that will help
+          improve lives, and I look forward to contributing more in the future.
         </p>
       </div>
     ),
@@ -86,7 +89,7 @@ export const projects = [
     description:
       'A recipe finder application using voice input (MDN Speech API) and a simple user interface.',
     thumbnail: recipeMobileMock,
-    images: [recipeMacMock, recipeMobileMock, recipeGif],
+    images: [recipeMacMock, recipeMobileMock],
     stack: ['React', 'Nextjs', 'Tailwindcss', 'Typescript', 'Vercel v0'],
     slug: 'voice-recipe-search-app',
     content: (
