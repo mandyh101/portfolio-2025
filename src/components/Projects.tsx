@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Paragraph } from './Paragraph'
 import { motion } from 'framer-motion'
-
+import GitHubCalendarComponent from './GithubCalendar'
 export const Projects = () => {
   return (
     <div className="section-padding">
@@ -69,6 +69,7 @@ export const Projects = () => {
           </motion.div>
         ))}
       </div>
+      <GitHubCalendarComponent username="mandyh101" />
     </div>
   )
 }
