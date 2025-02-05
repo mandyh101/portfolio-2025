@@ -25,11 +25,11 @@ export const navlinks = [
   //   label: "Projects",
   //   icon: IconBriefcase2,
   // },
-  {
-    href: '/blog', //todo update to blog when ready to publish page
-    label: 'Blog - coming soon!',
-    icon: IconPencil,
-  },
+  // {
+  //   href: '/blog', //todo update to blog when ready to publish page
+  //   label: 'Blog - coming soon!',
+  //   icon: IconPencil,
+  // },
   // {
   //   href: '/contact',
   //   label: 'Contact',
