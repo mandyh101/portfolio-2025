@@ -2,7 +2,7 @@ import {
   IconArticle,
   IconBolt,
   IconHome,
-  // IconBriefcase2,
+  IconBriefcase2,
   IconMail,
   IconMessage2,
   IconPencil,
@@ -20,11 +20,11 @@ export const navlinks = [
     label: 'Working with me',
     icon: IconBolt,
   },
-  // {
-  //   href: "/projects",
-  //   label: "Projects",
-  //   icon: IconBriefcase2,
-  // },
+  {
+    href: '/projects',
+    label: 'Projects',
+    icon: IconBriefcase2,
+  },
   // {
   //   href: '/blog', //todo update to blog when ready to publish page
   //   label: 'Blog - coming soon!',

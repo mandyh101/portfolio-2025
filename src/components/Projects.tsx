@@ -7,14 +7,19 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Paragraph } from './Paragraph'
 import { motion } from 'framer-motion'
-import GitHubCalendarComponent from './GithubCalendar'
-export const Projects = () => {
+
+interface ProjectsProps {
+  showHeading?: boolean
+}
+export const Projects = ({ showHeading = true }: ProjectsProps) => {
   return (
     <div className="section-padding">
-      <Heading as="h2" className="text-3xl md:text-4xl">
-        What I&apos;ve been <span className="text-sea-green-600">work</span>ing
-        on
-      </Heading>
+      {showHeading && (
+        <Heading as="h2" className="text-3xl md:text-4xl">
+          What I&apos;ve been <span className="text-sea-green-600">work</span>
+          ing on
+        </Heading>
+      )}
       <div className="grid grid-cols-1 gap-10 mt-6">
         {projects.map((project: Project, idx: number) => (
           <motion.div
@@ -33,10 +38,10 @@ export const Projects = () => {
               href={project.slug ? `/projects/${project.slug}` : project.href}
               key={project.href}
               className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 
-  bg-tropical-indigo-100
-  hover:bg-tropical-indigo-200 
-  rounded-2xl transition duration-200 pt-4 
-  shadow-md"
+              bg-tropical-indigo-100
+              hover:bg-tropical-indigo-200 
+              rounded-2xl transition duration-200 pt-4 
+              shadow-md"
             >
               <Image
                 src={project.thumbnail}
@@ -69,7 +74,6 @@ export const Projects = () => {
           </motion.div>
         ))}
       </div>
-      <GitHubCalendarComponent username="mandyh101" />
     </div>
   )
 }

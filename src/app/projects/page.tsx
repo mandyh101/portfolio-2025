@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
+import GithubCalendar from '@/components/GithubCalendar'
 import { Heading } from '@/components/Heading'
-import { Highlight } from '@/components/Highlight'
-import { Paragraph } from '@/components/Paragraph'
+
 import { Projects } from '@/components/Projects'
 import { Metadata } from 'next'
 
@@ -15,13 +15,14 @@ export const metadata: Metadata = {
 export default function ProjectPage() {
   return (
     <Container>
-      <span className="text-4xl">⚡</span>
-      <Heading className="font-black mb-10">
+      <Heading className="h1">
         {' '}
-        What I&apos;ve been working on
+        What I&apos;ve been <span className="text-sea-green-800">work</span>ing
+        on
       </Heading>
 
-      <Projects />
+      <Projects showHeading={false} />
+      <GithubCalendar username="mandyh101" />
     </Container>
   )
 }
