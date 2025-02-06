@@ -1,6 +1,6 @@
-import volitionMock2 from 'public/images/projects/volition/volition-mock-2-min.png'
-import volitionMock3 from 'public/images/projects/volition/volition-mock-3-min.png'
-import volitionHome from 'public/images/projects/volition/volition-home-min.png'
+import volitionMock2 from 'public/images/projects/volition/volition-mock-2.png'
+import volitionMock3 from 'public/images/projects/volition/volition-mock-3.png'
+import volitionHome from 'public/images/projects/volition/volition-home.png'
 import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup1.png'
 import recipeMobileMock from 'public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
 

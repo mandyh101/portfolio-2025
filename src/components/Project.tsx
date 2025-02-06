@@ -88,7 +88,7 @@ export const SingleProject = ({ project }: { project: Project }) => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          stroke-Linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
           className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
         >
