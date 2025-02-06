@@ -7,7 +7,7 @@ export const Footer = () => {
       <span className="font-semibold">{new Date().getFullYear()} </span>
       &#8212; Mandy Hale |{' '}
       <span className="italic">
-        Full stack web developer, full time problem solver.
+        Full stack web developer and creative problem solver.
       </span>
     </div>
   )
