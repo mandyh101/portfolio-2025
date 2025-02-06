@@ -1,7 +1,7 @@
 ## Sidefolio - Portfolio website template
 
 # Welcome!
-Kia ora, I'm Mandy, Welcome to my portfolio! It's currently a WIP. *//TODO update to LIVE :D* 
+Kia ora, I'm Mandy, Welcome to my portfolio!
 I am building my portfolio using `React` with the `Next.JS` framework and using the Sidefolio - Portfolio website template for my foundation from [Aceternity UI](https://ui.aceternity.com/templtes/sidefolio). I wanted to use some nice transitions and interactions, and convey some parts of my personality as a obsessive note-taker, writer, and fan of clean, simplicity and user friendliness.  I am using `Tailwind` and `TypeScript` because I love them both. Tailwind because life is just easier and Typescript because I find it so helpful for knowing what I'm working with, debugging and just the certainty it gives me!
 
 ## Getting Started
@@ -29,11 +29,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## deployment
 This project is deployed on Vercel.
-1. Make sure you are on main
+1. Make sure you are on *main* branch
 2. Make sure you are logged into vercel `vercel login`
 3. run `npm run build`
-4. `vercel` to deploy
-5. visit vercel dashboard or the portfolio website `https://mandy-hale-dev-portfolio-mandyh101s-projects.vercel.app`
+4. `vercel` to deploy a preview version
+5. Once preview is approved, `vercel --prod` to deploy to production
+5. Visit vercel dashboard or the portfolio website `https://mandy-hale-dev-portfolio-mandyh101s-projects.vercel.app`
 
 
 
