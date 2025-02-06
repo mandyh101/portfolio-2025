@@ -3,12 +3,11 @@ import { navlinks } from '@/constants/navlinks'
 import { Navlink } from '@/types/navlink'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Heading } from './Heading'
 import { socials } from '@/constants/socials'
-import { Badge } from './Badge'
 import { AnimatePresence, motion } from 'framer-motion'
 import { IconLayoutSidebarRightCollapse } from '@tabler/icons-react'
 import { isMobile } from '@/lib/utils'
@@ -139,13 +138,15 @@ const SidebarHeader = ({ open }: { open: boolean }) => {
           !open ? 'mx-auto w-10 h-10' : 'w-14 h-14'
         }`}
       >
-        <Image
-          src="/images/mandy_hale_circl.png"
-          alt=""
-          height="40"
-          width="40"
-          className="object-cover flex-shrink-0"
-        />
+        <Link href="/">
+          <Image
+            src="/images/mandy_hale_circl.png"
+            alt=""
+            height="40"
+            width="40"
+            className="object-cover flex-shrink-0"
+          />
+        </Link>
       </div>
       <div className={`flex text-sm flex-col ${!open && 'hidden'}`}>
         <p className="font-bold text-primary">Mandy Hale</p>
