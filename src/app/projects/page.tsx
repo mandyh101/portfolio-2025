@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ProjectPage() {
   return (
     <Container>
-      <Heading className="h1">
+      <Heading className="h1 pb-2">
         {' '}
         What I&apos;ve been <span className="text-sea-green-800">work</span>ing
         on
