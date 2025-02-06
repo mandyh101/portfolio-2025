@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Mandy Hale - Web developer | laravel | react | typescript',
   description:
-    'Mandy Hale is a full stack developer who loves to read and write about the latest technology and digital sustainability.',
+    'Mandy Hale is a full stack developer who loves to create useful, intuitive technology to improve the way we live and work.',
 }
 
 export default function RootLayout({
