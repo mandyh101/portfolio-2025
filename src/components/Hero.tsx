@@ -8,7 +8,8 @@ import { Badge } from './Badge'
 export const Hero = () => {
   return (
     <div className="section-padding">
-      <Heading>
+      {/* TODO maybe add extra padding bottom here for consistency with other pages */}
+      <Heading className="h1">
         <span className="text-sea-green-600">Kia ora!</span> I&apos;m Mandy
       </Heading>
       <div className="max-w-xl mt-4 flex flex-col space-y-4">
