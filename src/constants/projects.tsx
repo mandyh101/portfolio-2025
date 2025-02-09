@@ -100,11 +100,17 @@ export const projects = [
           Data is essential for driving good decision-making, particularly in
           impact-focused spaces. Keen to explore projects where I can expand my
           skillset in working with data, I decided to build an LLM-powered book
-          recommendation system. Following a freeCodeCamp tutorial, I created a
-          system that not only recommends books but also lets users filter by
-          category and emotional tone. This project was my first step into data
-          science and Large Language Models (LLMs), combining my curiosity with
-          practical application.{' '}
+          recommendation system. Following a{' '}
+          <a
+            href="https://youtu.be/Q7mS1VHm3Yw?si=sHNxAobCRqeSTspo"
+            target="_blank"
+          >
+            freeCodeCamp tutorial
+          </a>
+          , I created a system that not only recommends books but also lets
+          users filter by category and emotional tone. This project was my first
+          step into data science and Large Language Models (LLMs), combining my
+          curiosity with practical application.{' '}
         </p>
         <h2 className="h2">
           <span className="text-sea-green-800">Tech</span> stack and
@@ -162,8 +168,14 @@ export const projects = [
           Building this book recommender has sparked my interest in data
           storytelling and LLM applications. As a next step, I am looking to
           deepen my understanding of working with data and natural language
-          processing models through Hugging Face&apos;s NLP course. The
-          experience of working through this tutorial has been a valuable
+          processing models through{' '}
+          <a
+            href="https://huggingface.co/learn/nlp-course/en/chapter1/1"
+            target="_blank"
+          >
+            Hugging Face&apos;s NLP course
+          </a>
+          . The experience of working through this tutorial has been a valuable
           stepping stone in my journey to use AI and data science for strategic
           solutions in business and decision-making. Give it a go below, and let
           me know what you think!
