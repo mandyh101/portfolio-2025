@@ -85,10 +85,10 @@ export const projects = [
     cta: 'Learn more about Volition',
   },
   {
-    href: '#',
+    href: 'https://741f707fb9dc8a6783.gradio.live',
     title: 'LLM-Powered Book Recommender',
     description:
-      'Data is essential for driving good decision-making, particularly in impact-focused spaces. Keen to explore projects where I can expand my skillset in working with data, I decided to build an LLM-powered book recommendation system.',
+      'Data is essential for driving good decision-making, particularly in impact-focused spaces. Keen to explore projects where I can expand my skillset in working with data and Python, I decided to build an LLM-powered book recommender.',
     thumbnail: bookRecommenderMock,
     images: [bookRecommenderMock],
     stack: ['Python', 'OpenAi', 'Langchain', 'Gradio'],
