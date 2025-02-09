@@ -3,6 +3,7 @@ import volitionMock3 from 'public/images/projects/volition/volition-mock-3.png'
 import volitionHome from 'public/images/projects/volition/volition-home.png'
 import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup1.png'
 import recipeMobileMock from 'public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
+import bookRecommenderMock from 'public/images/projects/llm-book-search/book-recommender.png'
 
 export const projects = [
   {
@@ -84,6 +85,94 @@ export const projects = [
     cta: 'Learn more about Volition',
   },
   {
+    href: '#',
+    title: 'LLM-Powered Book Recommender',
+    description:
+      'Data is essential for driving good decision-making, particularly in impact-focused spaces. Keen to explore projects where I can expand my skillset in working with data, I decided to build an LLM-powered book recommendation system.',
+    thumbnail: bookRecommenderMock,
+    images: [bookRecommenderMock],
+    stack: ['Python', 'OpenAi', 'Langchain', 'Gradio'],
+    slug: 'llm-book-recommender',
+    content: (
+      <div>
+        <h2 className="h2">Project overview</h2>
+        <p>
+          Data is essential for driving good decision-making, particularly in
+          impact-focused spaces. Keen to explore projects where I can expand my
+          skillset in working with data, I decided to build an LLM-powered book
+          recommendation system. Following a freeCodeCamp tutorial, I created a
+          system that not only recommends books but also lets users filter by
+          category and emotional tone. This project was my first step into data
+          science and Large Language Models (LLMs), combining my curiosity with
+          practical application.{' '}
+        </p>
+        <h2 className="h2">
+          <span className="text-sea-green-800">Tech</span> stack and
+          implementation
+        </h2>
+        <p>
+          The project leverages Python, OpenAI, LangChain, and Gradio to create
+          a user-friendly book recommendation dashboard. At its core, the system
+          comprises four key components:
+        </p>{' '}
+        <ol>
+          <li>A vector database for similarity-based book recommendations</li>
+          <li>
+            A zero-shot classification model for fiction/non-fiction
+            categorisation
+          </li>
+          <li>
+            A fine-tuned text classification model for emotional tone analysis
+          </li>
+          <li>An intuitive Gradio interface for demonstration purposes</li>
+        </ol>
+        <h2 className="h2">
+          <span className="text-sea-green-800">Growth</span> reflections
+        </h2>
+        <p>
+          As my first Python project, I encountered and overcame several
+          challenges. The syntax differences compared to JavaScript and PHP,
+          which I am more familiar with, initially posed hurdles. But as I began
+          to recognise similar patterns I became more confident working with teh
+          python codebase. A particularly proud moment came when I independently
+          debugged and resolved a data duplication issue in my final
+          implementation, applying the Python skills I&apos;d learned throughout
+          the course to correct my problem.
+        </p>
+        <p>
+          The project was a great way to explore the capabilities of LLMs and to
+          gain skills in working with Python and data. Working with real data
+          from KaggleHub taught me valuable lessons about data cleaning,
+          analysis, and the importance of data quality in machine learning
+          applications. I learned to make practical decisions about feature
+          implementation based on data consistency—such as limiting category
+          classification to fiction/non-fiction due to data sparsity in more
+          specific categories. I also learned how to see the opportunity with
+          long text descriptions to analyse emotional tone alongside text
+          similarity and enhance the recommendation system.
+        </p>
+        <video
+          src="/images/projects/llm-book-search/book-recommender-demo.webm"
+          autoPlay
+          muted
+          loop
+        />
+        <h2 className="h2">Where to from here?</h2>
+        <p>
+          Building this book recommender has sparked my interest in data
+          storytelling and LLM applications. As a next step, I am looking to
+          deepen my understanding of working with data and natural language
+          processing models through Hugging Face&apos;s NLP course. The
+          experience of working through this tutorial has been a valuable
+          stepping stone in my journey to use AI and data science for strategic
+          solutions in business and decision-making. Give it a go below, and let
+          me know what you think!
+        </p>
+      </div>
+    ),
+    cta: 'Try it yourself',
+  },
+  {
     href: 'https://voice-recipe-search-app.vercel.app/',
     title: 'Voice-based recipe search engine',
     description:
@@ -154,36 +243,7 @@ export const projects = [
       </div>
     ),
   },
-  // {
-  //   href: "https://gomoonbeam.com",
-  //   title: "Moonbeam",
-  //   description:
-  //     "Never write from scratch again with Moonbeam, your AI first writing tool",
-  //   thumbnail: sidefolioMoonbeam,
-  //   images: [sidefolioMoonbeam, sidefolioMoonbeam2],
-  //   stack: ["Nextjs", "Tailwindcss"],
-  //   slug: "moonbeam",
-  //   content: (
-  //     <div>
-  //       <p>
-  //         Sit eiusmod ex mollit sit quis ad deserunt. Sint aliqua aliqua ullamco
-  //         dolore nulla amet tempor sunt est ipsum. Dolor laborum eiusmod
-  //         cupidatat consectetur velit ipsum. Deserunt nisi in culpa laboris
-  //         cupidatat elit velit aute mollit nisi. Officia ad exercitation laboris
-  //         non cupidatat duis esse velit ut culpa et.{" "}
-  //       </p>
-  //       <p>
-  //         Exercitation pariatur enim occaecat adipisicing nostrud adipisicing
-  //         Lorem tempor ullamco exercitation quis et dolor sint. Adipisicing sunt
-  //         sit aute fugiat incididunt nostrud consequat proident fugiat id.
-  //         Officia aliquip laborum labore eu culpa dolor reprehenderit eu ex enim
-  //         reprehenderit. Cillum Lorem veniam eu magna exercitation.
-  //         Reprehenderit adipisicing minim et officia enim et veniam Lorem
-  //         excepteur velit adipisicing et Lorem magna.
-  //       </p>{" "}
-  //     </div>
-  //   ),
-  // },
+
   // {
   //   href: "https://tailwindmasterkit.com",
   //   title: "Tailwind Master Kit",
