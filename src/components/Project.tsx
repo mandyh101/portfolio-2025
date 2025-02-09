@@ -37,23 +37,25 @@ export const SingleProject = ({ project }: { project: Project }) => {
         />
         <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </motion.div>
-      <div className="flex flex-row justify-center my-8 flex-wrap">
-        {project.images.map((image, idx) => (
-          <button
-            onClick={() => setActiveImage(image)}
-            key={`image-thumbnail-${idx}`}
-          >
-            <Image
-              priority
-              src={image}
-              alt="project thumbnail"
-              height="1000"
-              width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
-            />
-          </button>
-        ))}
-      </div>
+      {project.images.length > 1 && (
+        <div className="flex flex-row justify-center my-8 flex-wrap">
+          {project.images.map((image, idx) => (
+            <button
+              onClick={() => setActiveImage(image)}
+              key={`image-thumbnail-${idx}`}
+            >
+              <Image
+                priority
+                src={image}
+                alt="project thumbnail"
+                height="1000"
+                width="1000"
+                className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+              />
+            </button>
+          ))}
+        </div>
+      )}
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="h1 py-4"> {project.title}</Heading>
         <div className="flex flex-wrap gap-4 md:mb-1 mt-2 md:mt-0 lg:self-end">
