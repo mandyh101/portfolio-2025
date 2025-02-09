@@ -35,7 +35,7 @@ This project is deployed on Vercel.
 3. run `npm run build`
 4. `vercel` to deploy a preview version
 5. Once preview is approved, `vercel --prod` to deploy to production
-5. Visit vercel dashboard or the portfolio website `https://mandy-hale-dev-portfolio-mandyh101s-projects.vercel.app`
+5. Visit vercel dashboard or the portfolio website `https://mandy-hale-dev-portfolio.vercel.app`
 
 
 
