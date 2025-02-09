@@ -86,7 +86,7 @@ export const projects = [
   },
   {
     href: '',
-    title: 'LLM-Powered Book Recommender',
+    title: 'LLM-Powered Book Search',
     description:
       'Data is essential for driving good decision-making, particularly in impact-focused spaces. Keen to explore projects where I can expand my skillset in working with data and Python, I decided to build an LLM-powered book recommender.',
     thumbnail: bookRecommenderMock,
