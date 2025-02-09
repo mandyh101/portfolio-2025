@@ -85,7 +85,7 @@ export const projects = [
     cta: 'Learn more about Volition',
   },
   {
-    href: 'https://741f707fb9dc8a6783.gradio.live',
+    href: '',
     title: 'LLM-Powered Book Recommender',
     description:
       'Data is essential for driving good decision-making, particularly in impact-focused spaces. Keen to explore projects where I can expand my skillset in working with data and Python, I decided to build an LLM-powered book recommender.',
@@ -182,7 +182,9 @@ export const projects = [
         </p>
       </div>
     ),
-    cta: 'Try it yourself',
+    hidePreview: true,
+    showGithubLink: true,
+    githubLink: 'https://github.com/mandyh101/Semantic-Book-Recommender',
   },
   {
     href: 'https://voice-recipe-search-app.vercel.app/',
@@ -254,6 +256,8 @@ export const projects = [
         </p>
       </div>
     ),
+    showGithubLink: true,
+    githubLink: 'https://github.com/mandyh101/Voice-Recipe-Search-App',
   },
 
   // {

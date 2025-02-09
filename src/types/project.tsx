@@ -10,4 +10,7 @@ export type Project = {
   stack?: string[]
   content?: React.ReactNode | string
   cta?: string
+  showGithubLink?: boolean
+  githubLink?: string
+  hidePreview?: boolean
 }
