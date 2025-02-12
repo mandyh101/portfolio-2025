@@ -7,6 +7,8 @@ import {
   IconMessage2,
   IconPencil,
   IconUser,
+  IconBriefcase,
+  IconHeartHandshake,
 } from '@tabler/icons-react'
 
 export const navlinks = [
@@ -16,14 +18,19 @@ export const navlinks = [
     icon: IconHome,
   },
   {
-    href: '/about',
-    label: 'Working with me',
+    href: '/projects',
+    label: 'Projects',
     icon: IconBolt,
   },
   {
-    href: '/projects',
-    label: 'Projects',
+    href: '/work-experience',
+    label: 'Work experience',
     icon: IconBriefcase2,
+  },
+  {
+    href: '/about',
+    label: 'Working with me',
+    icon: IconHeartHandshake,
   },
   // {
   //   href: '/blog', //todo update to blog when ready to publish page
