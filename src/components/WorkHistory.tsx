@@ -7,14 +7,17 @@ import { IconCircleCheckFilled } from '@tabler/icons-react'
 
 export const WorkHistory = () => {
   return (
-    <div>
-      {/* TODO add a connecting line between the timeline items */}
+    <div className="relative">
+      <div className="absolute left-0 mr-4 md:mr-0 ml-4 md:left-32 top-0 w-px h-full bg-neutral-200" />
       {timeline.map((item, index) => (
         <div
           className="flex md:flex-row flex-col space-y-10 md:space-y-0 space-x-10 my-20 relative"
           key={`timeline-${index}`}
         >
-          <Paragraph className="w-full md:w-32 md:flex-shrink-0 italic">
+          <Paragraph
+            className="w-fit h-fit md:w-32 md:flex-shrink-0 italic px-2 py-1 bg-mono-grey-50 rounded-sm shadow-sm
+          z-10"
+          >
             {item.date}
           </Paragraph>
           <div>
