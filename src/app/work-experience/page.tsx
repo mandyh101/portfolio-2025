@@ -23,7 +23,11 @@ export default function Home() {
         Connect with me on LinkedIn for more information about my work history
         and experience.
       </Paragraph>
-      <Badge href="/" text="LinkedIn" icon={<IconBrandGithub size={14} />} />
+      <Badge
+        href="/https://www.linkedin.com/in/mandyhale88/"
+        text="LinkedIn"
+        icon={<IconBrandGithub size={14} />}
+      />
     </Container>
   )
 }
