@@ -27,6 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [ ] investigate github live integration 
 - [ ] add my strengths cards to my about page using Aceternity focus cards: https://ui.aceternity.com/components/focus-cards
 - [ ] add call to actions to my about page
+- [ ] extract stack list to a component (in project and timeline components)
 
 ## deployment
 This project is deployed on Vercel.
