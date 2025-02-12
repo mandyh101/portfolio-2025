@@ -27,9 +27,19 @@ export const WorkHistory = () => {
             <Paragraph className="text-base md:text-base lg:text-base font-semibold">
               {item.title}
             </Paragraph>
-            {/* TODO description becomes a stack list */}
-            <Paragraph className="text-sm mb-4">{item.description}</Paragraph>
-
+            {/* TODO should probably extract this to a component... */}*/}
+            {item.technologies && (
+              <div className="flex gap-2 my-2 flex-wrap">
+                {item.technologies.map((tech: string) => (
+                  <span
+                    key={tech}
+                    className="text-xs font-heading md:text-sm bg-mono-grey-100 px-2 py-1 rounded-sm text-secondary shadow-sm text-night"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
             {item.responsibilities.map((responsibility, index) => (
               <Step key={index}>{responsibility}</Step>
             ))}
