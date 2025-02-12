@@ -63,7 +63,7 @@ export const SingleProject = ({ project }: { project: Project }) => {
           {project.stack?.map((stack: string) => (
             <span
               key={stack}
-              className="font-heading text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+              className="font-heading text-xs md:text-xs lg:text-xs bg-mono-grey-100 text-night px-2 py-1 rounded-sm shadow-sm"
             >
               {stack}
             </span>

@@ -51,10 +51,6 @@ export const Sidebar = () => {
             <SidebarHeader open={open} />
             <Navigation setOpen={setOpen} open={open} />
           </div>
-          {/* TODO: bring back this link with resume? Also fix bug so that isOpen cannot be toggled on non-mobile devices */}
-          {/* <div onClick={() => isMobile() && setOpen(false)}>
-            <Badge href="/resume" text="Read Resume" />
-          </div> */}
         </motion.div>
       </AnimatePresence>
     </>
