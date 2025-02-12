@@ -11,7 +11,6 @@ import { socials } from '@/constants/socials'
 import { AnimatePresence, motion } from 'framer-motion'
 import { IconLayoutSidebarRightCollapse } from '@tabler/icons-react'
 import { isMobile } from '@/lib/utils'
-import { Badge } from './Badge'
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(true)
