@@ -88,8 +88,8 @@ export default function About({ isAvailable = true }: AboutProps) {
           create solutions that are intuitive and user-centered. Based in
           Ōtautahi (Christchurch), Aotearoa (New Zealand) and with extensive
           experience as a remote worker, I&apos;m able to effectively
-          collaborate across cross-functional teams across hybrid and fully
-          remote environments.
+          collaborate between cross-functional teams in hybrid and fully remote
+          environments.
         </Paragraph>
         <Paragraph>
           My approach is built on three core values: growth, collaboration, and
