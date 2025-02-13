@@ -24,7 +24,7 @@ export default function Home() {
         and experience.
       </Paragraph>
       <Badge
-        href="/https://www.linkedin.com/in/mandyhale88/"
+        href="https://www.linkedin.com/in/mandyhale88/"
         text="LinkedIn"
         icon={<IconBrandGithub size={14} />}
       />
