@@ -16,7 +16,7 @@ export const projects = [
     stack: [
       'React',
       'Typescript',
-      'Scss',
+      'SASS',
       'StorybookUI',
       'Nodejs',
       'Tanstack',

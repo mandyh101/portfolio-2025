@@ -52,6 +52,7 @@ export const timeline = [
       'VueJS',
       'TailwindCSS',
       'MySQL',
+      'Docker',
       'REST APIs',
       'Ionic',
       'SilverStripe',
