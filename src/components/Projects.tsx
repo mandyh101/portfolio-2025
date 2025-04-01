@@ -60,7 +60,7 @@ export const Projects = ({ showHeading = true }: ProjectsProps) => {
                       key={project.href}
                     >
                       {project.title}
-                      <span className="absolute inset-0 z-10"></span>
+                      <span className="absolute inset-0 z-10" />
                     </Link>
                   </Heading>
                   <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
