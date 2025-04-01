@@ -9,12 +9,12 @@ export const TechStack = () => {
     {
       title: 'Laravel',
       src: '/images/logos/laravel.svg',
-      className: 'h-10 w-14',
+      className: 'h-10 w-10',
     },
     {
       title: 'TypeScript',
       src: '/images/logos/typescript.svg',
-      className: 'h-10 w-14',
+      className: 'h-10 w-10',
     },
     {
       title: 'React JS',
@@ -34,7 +34,7 @@ export const TechStack = () => {
     {
       title: 'Tailwind',
       src: '/images/logos/tailwind.png',
-      className: 'h-10 w-24',
+      className: 'h-10 w-10',
     },
     {
       title: 'Framer Motion',
@@ -44,7 +44,7 @@ export const TechStack = () => {
     {
       title: 'Git',
       src: '/images/logos/git.svg',
-      className: 'h-10 w-24',
+      className: 'h-10 w-10',
     },
     {
       title: 'RESTful APIs',
@@ -59,12 +59,12 @@ export const TechStack = () => {
     {
       title: 'Figma',
       src: '/images/logos/figma.png',
-      className: 'h-10 w-8',
+      className: 'h-10 w-10',
     },
     {
       title: 'Miro',
       src: '/images/logos/miro.svg',
-      className: 'h-10 w-8',
+      className: 'h-10 w-10',
     },
   ]
   return (
@@ -79,7 +79,7 @@ export const TechStack = () => {
       <div className="flex flex-wrap mt-8 gap-y-6">
         {stack.map((item) => (
           <div
-            className="flex flex-col items-center justify-center mx-3 min-w-[100px]"
+            className="flex flex-col items-center justify-center mr-3 min-w-[100px]"
             key={item.src}
           >
             <Image
