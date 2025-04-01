@@ -57,9 +57,9 @@ export const SingleProject = ({ project }: { project: Project }) => {
           ))}
         </div>
       )}
-      <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
+      <div className="flex lg:flex-row lg:items-end justify-between flex-col mt-20">
         <Heading className="h1 py-4">{project.title}</Heading>
-        <div className="flex flex-wrap gap-4 md:mb-1 mt-2 md:mt-0 lg:self-end">
+        <div className="flex flex-wrap lg:py-4 gap-4 mb-1 lg:justify-end">
           {project.stack?.map((stack: string) => (
             <span
               key={stack}
@@ -71,7 +71,7 @@ export const SingleProject = ({ project }: { project: Project }) => {
         </div>
       </div>
       <div>
-        <Paragraph className="max-w-xl mt-4">{project.description}</Paragraph>
+        <Paragraph className="mt-4">{project.description}</Paragraph>
       </div>
       <div className="prose prose-sm md:prose-base max-w-none text-neutral-600">
         {project?.content}
