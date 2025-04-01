@@ -34,14 +34,12 @@ export const Projects = ({ showHeading = true }: ProjectsProps) => {
             }}
             transition={{ duration: 0.2, delay: idx * 0.1 }}
           >
-            <Link
-              href={project.slug ? `/projects/${project.slug}` : project.href}
-              key={project.href}
+            <div
               className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 
               bg-tropical-indigo-100
               hover:bg-tropical-indigo-200 
               rounded-2xl transition duration-200 pt-4 
-              shadow-md"
+              shadow-md relative"
             >
               <Image
                 src={project.thumbnail}
@@ -53,7 +51,17 @@ export const Projects = ({ showHeading = true }: ProjectsProps) => {
               <div className="flex flex-col justify-between p-2 md:p-0">
                 <div>
                   <Heading as="h3" className="h3">
-                    {project.title}
+                    <Link
+                      href={
+                        project.slug
+                          ? `/projects/${project.slug}`
+                          : project.href
+                      }
+                      key={project.href}
+                    >
+                      {project.title}
+                      <span className="absolute inset-0 z-10"></span>
+                    </Link>
                   </Heading>
                   <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
                     {project.description}
@@ -70,7 +78,7 @@ export const Projects = ({ showHeading = true }: ProjectsProps) => {
                   ))}
                 </div>
               </div>
-            </Link>
+            </div>
           </motion.div>
         ))}
       </div>
