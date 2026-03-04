@@ -2,9 +2,9 @@
 
 # Welcome!
 Kia ora, I'm Mandy, Welcome to my portfolio!
-I am building my portfolio using `React` with the `Next.JS` framework and using the Sidefolio - Portfolio website template for my foundation from [Aceternity UI](https://ui.aceternity.com/templtes/sidefolio). I wanted to use some nice transitions and interactions, and convey some parts of my personality as a obsessive note-taker, writer, and fan of clean, simplicity and user friendliness.  I am using `Tailwind` and `TypeScript` because I love them both. Tailwind because life is just easier and Typescript because I find it so helpful for knowing what I'm working with, debugging and just the certainty it gives me!
+I am building my portfolio using `React` with the `Next.JS` framework and using the Sidefolio - Portfolio website template for my foundation from [Aceternity UI](https://ui.aceternity.com/templtes/sidefolio). I wanted to use some fun transitions and interactions, and convey some parts of my personality as an obsessive note-taker, writer, and fan of clean, simple design and user friendliness.
 
-## Getting Started
+## Getting Started - development
 
 First, run the development server:
 
@@ -31,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [ ] add call to actions to my about page
 - [ ] extract stack list to a component (in project and timeline components)
 
-## deployment
+## Deployment
 This project is deployed on Vercel.
 1. Make sure you are on *main* branch
 2. Make sure you are logged into vercel `vercel login`
