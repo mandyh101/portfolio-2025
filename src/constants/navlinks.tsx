@@ -32,11 +32,11 @@ export const navlinks = [
     label: 'Working with me',
     icon: IconHeartHandshake,
   },
-  // {
-  //   href: '/blog', //todo update to blog when ready to publish page
-  //   label: 'Blog - coming soon!',
-  //   icon: IconPencil,
-  // },
+  {
+    href: '/blog',
+    label: 'Blog',
+    icon: IconPencil,
+  },
   // {
   //   href: '/contact',
   //   label: 'Contact',

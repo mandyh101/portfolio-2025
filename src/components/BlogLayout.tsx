@@ -1,15 +1,12 @@
-"use client";
-import Head from "next/head";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { formatDate } from "../../lib/formatDate";
 import { Prose } from "@/components/Prose";
 import { Container } from "./Container";
 import { Heading } from "./Heading";
 import Link from "next/link";
-import { Paragraph } from "./Paragraph";
+import { BlogMeta } from "@/constants/blogs";
 
-function ArrowLeftIcon(props: any) {
+function ArrowLeftIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
@@ -25,40 +22,51 @@ function ArrowLeftIcon(props: any) {
 export function BlogLayout({
   children,
   meta,
-  isRssFeed = false,
-  previousPathname,
-}: any) {
-  let router = useRouter();
-
+}: {
+  children: React.ReactNode;
+  meta: BlogMeta;
+}) {
   return (
     <Container>
       <article>
         <header className="flex flex-col">
           <Link
-            type="button"
             href="/blog"
-            aria-label="Go back to articles"
-            className="group mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition  "
+            aria-label="Back to all posts"
+            className="inline-flex items-center gap-2 mb-6 text-sm text-secondary hover:text-primary transition font-heading"
           >
-            <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 d" />
+            <ArrowLeftIcon className="h-4 w-4 stroke-current" />
+            All posts
           </Link>
 
-          <Heading className=" py-4">{meta.title}</Heading>
-          <time
-            dateTime={meta.date}
-            className="flex items-center text-base text-zinc-400 "
-          >
-            <Paragraph className=" text-zinc-700">
+          <Heading className="py-4">{meta.title}</Heading>
+
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <time dateTime={meta.date} className="text-sm text-secondary font-heading">
               {formatDate(meta.date)}
-            </Paragraph>
-          </time>
-          <div className="w-full mt-4 aspect-w-16 aspect-h-10 bg-gray-100 rounded-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+            </time>
+            {meta.tags && meta.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {meta.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs font-heading bg-mono-grey-100 text-night px-2 py-1 rounded-sm shadow-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="w-full mt-2 rounded-2xl overflow-hidden shadow-md">
             <Image
               src={meta.image}
-              alt="thumbnail"
-              height="800"
-              width="800"
-              className={`object-cover object-left-top w-full max-h-96`}
+              alt={meta.title}
+              height={600}
+              width={1200}
+              className="object-cover w-full max-h-96"
+              priority
             />
           </div>
         </header>
