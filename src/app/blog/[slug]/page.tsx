@@ -20,23 +20,25 @@ const postComponents: Record<string, React.ComponentType> = {
   'tailwindcss-tips-and-tricks': TailwindTips,
 }
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return blogs.map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogs.find((b) => b.slug === params.slug)
+  const { slug } = await params
+  const post = blogs.find((b) => b.slug === slug)
   if (!post) return { title: 'Blog | Mandy Hale' }
   return { title: post.title, description: post.description }
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = blogs.find((b) => b.slug === params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = blogs.find((b) => b.slug === slug)
   if (!post) redirect('/blog')
 
-  const PostContent = postComponents[params.slug]
+  const PostContent = postComponents[slug]
   if (!PostContent) redirect('/blog')
 
   return (

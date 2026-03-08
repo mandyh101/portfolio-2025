@@ -31,6 +31,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [ ] add call to actions to my about page
 - [ ] extract stack list to a component (in project and timeline components)
 
+## Adding new features
+1. Create feature branch
+2. Create PR to main
+3. Merge PR to main
+4. Deploy
+
 ## Deployment
 This project is deployed on Vercel.
 1. Make sure you are on *main* branch
