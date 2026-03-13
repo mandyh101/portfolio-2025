@@ -6,11 +6,11 @@ import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug
+  const { slug } = await params
   const project = projects.find((p) => p.slug === slug) as Project | undefined
   if (project) {
     return {
@@ -28,12 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function SingleProjectPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const slug = params.slug
+export default async function SingleProjectPage({ params }: Props) {
+  const { slug } = await params
   const project = projects.find((p) => p.slug === slug)
 
   if (!project) {

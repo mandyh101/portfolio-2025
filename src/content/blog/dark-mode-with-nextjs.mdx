@@ -1,0 +1,101 @@
+As a web developer, you may be wondering how to create a dark mode toggle for your web application. In this tutorial, we will explore how to implement a dark mode toggle with Next.js and Tailwind CSS.
+
+## Introduction
+
+The benefits of implementing a dark mode toggle in a web application are numerous. It can help reduce eye strain, improve readability, and even save battery life on mobile devices. The trend towards dark mode has been growing in popularity, and it's no surprise that users are now expecting it as a standard feature in their favorite applications.
+
+Next.js is a React framework that provides server-side rendering, making it easier to create performant and scalable web applications. Tailwind CSS is a utility-first CSS framework that allows for quick and easy styling of web applications.
+
+In this tutorial, we will be using Next.js and Tailwind CSS to create a dark mode toggle for our web application.
+
+## Setting up the Project
+
+To get started, we need to install both Next.js and Tailwind CSS. We can install Next.js by running the following command in our terminal:
+
+```bash
+npx create-next-app my-app
+```
+
+Once Next.js is installed, we can install Tailwind CSS by running the following command:
+
+```bash
+npm install tailwindcss
+```
+
+After installing Tailwind CSS, we need to create the basic structure of our application. We can do this by creating a new file called `index.js` in the `pages` directory of our project.
+
+## Implementing the Dark Mode Toggle
+
+Now that our basic application structure and styling are complete, we can move on to implementing the dark mode toggle functionality.
+
+To do this, we need to create a state variable to track the user's preferred theme:
+
+```tsx
+import { useState } from "react";
+
+export default function Home() {
+  const [theme, setTheme] = useState("light");
+
+  return (
+    <div className={theme === "light" ? "bg-white" : "bg-gray-800"}>
+      <div className="container mx-auto py-4">
+        <h1 className="text-4xl font-bold mb-4">Welcome to my Dark Mode Toggle!</h1>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        >
+          Toggle Theme
+        </button>
+      </div>
+    </div>
+  );
+}
+```
+
+## Improving the User Experience
+
+Now that we have implemented the basic functionality, we can improve the user experience by persisting the user's theme preference using localStorage:
+
+```tsx
+import { useEffect, useState } from "react";
+
+export default function Home() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  return (
+    <div className={theme === "light" ? "bg-white" : "bg-gray-800"}>
+      {/* content */}
+    </div>
+  );
+}
+```
+
+Finally, we can implement a media query to automatically switch between light and dark themes based on the user's device settings:
+
+```css
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a202c;
+  }
+  .text-gray-800 {
+    color: #fff;
+  }
+}
+```
+
+## Conclusion
+
+**Summary:** We've covered creating a dark mode toggle in Next.js and Tailwind CSS, including project setup, implementing toggle functionality, enhancing UX with localStorage and animations, and auto-switching themes based on device settings.
+
+By implementing a dark mode toggle in your web application, you can improve the user experience and stay up-to-date with current design trends. With Next.js and Tailwind CSS, creating a dark mode toggle is quick and easy.

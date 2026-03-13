@@ -1,9 +1,9 @@
-import volitionMock2 from 'public/images/projects/volition/volition-mock-2.png'
-import volitionMock3 from 'public/images/projects/volition/volition-mock-3.png'
-import volitionHome from 'public/images/projects/volition/volition-home.png'
-import recipeMacMock from 'public/images/projects/recipe-app/recipe-app-mac-mockup1.png'
-import recipeMobileMock from 'public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
-import bookRecommenderMock from 'public/images/projects/llm-book-search/book-recommender.png'
+import volitionMock2 from '../../public/images/projects/volition/volition-mock-2.png'
+import volitionMock3 from '../../public/images/projects/volition/volition-mock-3.png'
+import volitionHome from '../../public/images/projects/volition/volition-home.png'
+import recipeMacMock from '../../public/images/projects/recipe-app/recipe-app-mac-mockup1.png'
+import recipeMobileMock from '../../public/images/projects/recipe-app/recipe-app-mobile-mockup.png'
+import bookRecommenderMock from '../../public/images/projects/llm-book-search/book-recommender.png'
 
 export const projects = [
   {
