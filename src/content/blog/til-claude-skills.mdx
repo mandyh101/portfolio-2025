@@ -1,0 +1,46 @@
+This week I started the Code with JV Agentic Coding Essentials course and spent most of it exploring something I'd heard of but never actually used: Claude skills. I read the docs, did a deep dive into the Superpowers plugin repo to understand how they work, and ended up putting it all into practice by building my own skill.
+
+## What the heck is a skill?
+
+A skill is a reference guide you give Claude so it knows how to do something specific in your project — instead of explaining from scratch every time, you write it down once and Claude follows it whenever you need it.
+
+The Superpowers plugin repo is a good example of this in action. It's a collection of skills that provide insyruction for following a whole software development workflow. Something that stood out to me in the workflow the plugin presented was TDD-driven feature development, sub-agent orchestration, and the mental model of creating skills as TDD for process documentation.
+
+## The part that clicked
+
+Skills are how you automate the repetitive things. Any time you find yourself giving Claude the same instructions over and over, that's a signal to write a skill.
+
+What I found more interesting was *how* to write a good one. The Superpowers repo follows a philosophy I really like — creating skills is TDD for process documentation. Essentially, you run a scenario without the skill first to see what goes wrong, write the skill to fix it, refactor to close the loopholes. If you haven't watched an agent fail without the skill, you don't know what it actually needs to say.
+
+A couple of other things surprised me along the way.
+
+**Descriptions should only say *when* to use a skill — not what it does.**
+
+If your description summarises the workflow, Claude might follow the description instead of reading the full skill. You accidentally give it a shortcut.
+
+```yaml
+# ❌ Claude reads this and thinks it knows enough — skips the skill body
+description: Helps create TIL posts by asking reflection questions, drafting structure, and writing three files
+
+# ✅ Claude reads this and knows it needs to open the skill to find out what to do
+description: Use when the user wants to write a Today I Learned blog post for the portfolio website
+```
+
+**Using `@file` references loads files whether you need them or not.**
+
+I'd been using `@` syntax to reference other files. Turns out this force-loads the file into context immediately — burning tokens even when it's not needed. Better to just name the skill and let Claude load it on demand.
+
+## What I built
+
+I copied the `writing-skills` and `test-driven-development` skills from the Superpowers repo into my own project, then asked Claude to help me review them. The `writing-skills` skill was over 600 lines — the agentskills.io spec recommends keeping skills under 500. We worked through it together and moved the testing methodology and deployment checklist out into separate reference docs, getting it down to just over 400. TBC if this was worth the move or not as this reference documentation is not exactly 'conditional' and will be loaded everytime anyway. Maybe I could have left it? But I'm a bit of a sucker for organising content into specific files because lots of text makes my brain switch off.
+
+Then I used my writing-skills skill to build my first skill from scratch: a `today-i-learned` skill that interviews me about what I've learned and turns it into a blog post. Huzzah, this is how this post came into being. I figured I'd be wanting to write a reflection each week on my blog so here I am automating this workflow for myself. My new skill allows me to transcribe my weekly reflections into a prompt and voila a written post I can review and edit. The final piece in my loop was asking Claude to review the improvements I requested (fix up the tone, keep closer to my transcription of my reflection to maintain authenticity etc) and use these reflections to improve the skill. Here's my prompt for that:
+
+```
+Based on the changes I have made to your output using this skill, what learnings can you use to improve the skill so I have to make less changes next time. Review my updated til-claude-skills.mdx file as part of your reflection
+```
+
+
+## Week 1 done :checklist
+
+I came in having heard of skills but never really touched them. I leave with a pretty clear mental model: they're how you teach Claude the "how we do things here" for your project, so you're not starting from zero every session and can easily dispatch claude to complete a task you'd usually do yourself. And writing them well is its own craft — one that borrows a lot more from software engineering than I expected.
