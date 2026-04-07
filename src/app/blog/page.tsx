@@ -16,14 +16,9 @@ export default function BlogPage() {
     <Container>
       <Heading className="h1 pb-4">Blog</Heading>
       <Paragraph className="pb-10">
-        I share my experiences navigating web development and AI without a
-        traditional technical background. No computer science degree to see
-        here, just curiosity and a willingness to try some things.
+        Welcome to the place where I share my experiences navigating web development and AI.
       </Paragraph>
-      {/* <Blogs blogs={blogs} /> */}
-      <Paragraph className="pb-10">
-      Coming soon!
-      </Paragraph>
+      <Blogs blogs={blogs} />
     </Container>
   )
 }

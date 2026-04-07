@@ -8,16 +8,19 @@ import { Metadata } from 'next'
 //   1. Create src/content/blog/[slug].mdx
 //   2. Add metadata to src/constants/blogs.ts
 //   3. Add import + registry entry below
-import CleanCode from '@/content/blog/clean-code.mdx'
-import DarkMode from '@/content/blog/dark-mode-with-nextjs.mdx'
-import HowToWinClients from '@/content/blog/how-to-win-clients.mdx'
-import TailwindTips from '@/content/blog/tailwindcss-tips-and-tricks.mdx'
+import TilClaudeSkills from '@/content/blog/til-claude-skills.mdx'
+// Example posts from starter project — commented out
+// import CleanCode from '@/content/blog/clean-code.mdx'
+// import DarkMode from '@/content/blog/dark-mode-with-nextjs.mdx'
+// import HowToWinClients from '@/content/blog/how-to-win-clients.mdx'
+// import TailwindTips from '@/content/blog/tailwindcss-tips-and-tricks.mdx'
 
 const postComponents: Record<string, React.ComponentType> = {
-  'clean-code': CleanCode,
-  'dark-mode-with-nextjs': DarkMode,
-  'how-to-win-clients': HowToWinClients,
-  'tailwindcss-tips-and-tricks': TailwindTips,
+  'til-claude-skills': TilClaudeSkills,
+  // 'clean-code': CleanCode,
+  // 'dark-mode-with-nextjs': DarkMode,
+  // 'how-to-win-clients': HowToWinClients,
+  // 'tailwindcss-tips-and-tricks': TailwindTips,
 }
 
 type Props = { params: Promise<{ slug: string }> }
