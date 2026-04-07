@@ -107,7 +107,7 @@ export default function About({ isAvailable = false }: AboutProps) {
         </Heading>
         <Paragraph>
           When I&apos;m not at my computer, you&apos;ll find me hanging out with my baby boy or embracing the
-          outdoors. With so much of my work life spent at a computer, I take every opportunity to be present with my family and to connect with nature when I'm off the clock.
+          outdoors. With so much of my work life spent at a computer, I take every opportunity to be present with my family and to connect with nature when I&apos;m off the clock.
         </Paragraph>
       </div>
     </div>
