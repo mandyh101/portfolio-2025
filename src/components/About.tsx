@@ -10,7 +10,7 @@ type AboutProps = {
   isAvailable?: Boolean
 }
 
-export default function About({ isAvailable = true }: AboutProps) {
+export default function About({ isAvailable = false }: AboutProps) {
   const images = [
     '/images/about/surfing2.jpg',
     '/images/about/biking.jpg',
@@ -79,29 +79,20 @@ export default function About({ isAvailable = true }: AboutProps) {
           and communities.
         </Paragraph>
         <Paragraph>
-          With a non-traditional path into full-stack development, I bring a
-          unique blend of human and technical skills to every project. My
-          experience in web development, marketing, and communications has
-          shaped how I see technology—through the lens of a developer, a
-          communicator focused on understanding the user, and a relationship
-          builder who values collaboration. These perspectives drive me to
-          create solutions that are intuitive and user-centered. Based in
-          Ōtautahi (Christchurch), Aotearoa (New Zealand) and with extensive
-          experience as a remote worker, I&apos;m able to effectively
-          collaborate between cross-functional teams in hybrid and fully remote
-          environments.
+          I started my career working in roles across sales, operations, marketing and communications. My curiosity around how tech products were built lead me to jump onto a new path and learn to code. With this non-traditional path into full-stack development, I bring a
+          combo of human and technical skills to every project. My
+          experience helps me approach building tech solutions from different perspectives, as a developer seeking to understand the best technical path,
+          a communicator focused on understanding who the solution is for, and a relationship
+          builder who values collaboration across stakeholders to achieve the best outcomes. These perspectives drive me to
+          create solutions that are intuitive, the right fit, and user-centered.
         </Paragraph>
         <Paragraph>
           My approach is built on three core values: growth, collaboration, and
           communication. I thrive in challenging environments where I can learn
-          from and be inspired by others—seeing complex problems as
-          opportunities for continuous improvement and innovation. I believe
-          strong teamwork drives success, so I prioritise collaboration and aim
-          to support colleagues in achieving shared goals. Clear communication
-          is essential for alignment across teams, goals, and outcomes, ensuring
-          everyone is included in the development journey. I achieve this
-          through active listening, documentation, and establishing feedback
-          loops with clients and stakeholders.
+          from and be inspired by others. I seek a collaborative approach to solving complex problems as I believe this supports
+          continuous improvement and innovation. And I believe clear communication
+          is essential for alignment across teams, goals, and outcomes when building software, and this motivates me to work to ensure
+          everyone is included in the software development journey, technical and non-technical.
         </Paragraph>
         <Paragraph className="font-semibold">
           I&apos;m always keen to chat tech and hear about new opportunities and
@@ -115,11 +106,8 @@ export default function About({ isAvailable = true }: AboutProps) {
           Out of office
         </Heading>
         <Paragraph>
-          When I&apos;m not at my computer, you&apos;ll find me embracing the
-          outdoors as a water woman, mountain biker, and trail runner. I&apos;m
-          also a yoga teacher and actively contribute to my community as a
-          member of Climate Action Tech, Women in Tech Christchurch, and as a
-          volunteer Surf Life Guard at Taylors Mistake Surf Life Saving Club.
+          When I&apos;m not at my computer, you&apos;ll find me hanging out with my baby boy or embracing the
+          outdoors. With so much of my work life spent at a computer, I take every opportunity to be present with my family and to connect with nature when I'm off the clock.
         </Paragraph>
       </div>
     </div>
