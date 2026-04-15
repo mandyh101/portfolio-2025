@@ -15,7 +15,7 @@ describe('isMobile', () => {
     Object.defineProperty(window, 'innerWidth', {
       writable: true,
       configurable: true,
-      value: 1023,
+      value: 1024,
     })
     expect(isMobile()).toBe(true)
   })
