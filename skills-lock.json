@@ -4,7 +4,7 @@
     "call-external-ai": {
       "source": "CodeWithJV/agent-skills",
       "sourceType": "github",
-      "computedHash": "4df2e82eeffca1664ef6d89e169be80fa816e95d07c089aba88255700a955c60"
+      "computedHash": "6e9590711bab9496a8824db3ec5242b9a85a9340cb7ad5338cc2874c10a19589"
     }
   }
 }
