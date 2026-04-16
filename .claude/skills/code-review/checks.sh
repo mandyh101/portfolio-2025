@@ -3,7 +3,7 @@
 # Runs linting, type checking, tests, and git diff — outputs structured results for LLM review
 #
 # Usage:
-#   bash checks.sh              # check uncommitted changes
+#   bash checks.sh              # check uncommitted changes; falls back to last commit if none
 #   bash checks.sh --base main  # check diff against a branch
 
 BASE="${2:-}"  # optional --base <branch>
@@ -18,9 +18,17 @@ if [[ -n "$BASE" && "$1" == "--base" ]]; then
   echo ""
   git diff "$BASE"...HEAD
 else
-  git diff HEAD --stat
-  echo ""
-  git diff HEAD
+  # Fall back to last commit if there are no uncommitted changes
+  if git diff HEAD --quiet && git diff --cached --quiet; then
+    echo "(no uncommitted changes — showing last commit)"
+    git show HEAD --stat
+    echo ""
+    git show HEAD
+  else
+    git diff HEAD --stat
+    echo ""
+    git diff HEAD
+  fi
 fi
 echo ""
 
