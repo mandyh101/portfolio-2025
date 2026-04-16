@@ -1,0 +1,44 @@
+By the end of this week I've added a retro skill and a code review skill to my agentic coding toolkit, and I'm in the process of switching to a Tmux/Workmux terminal.
+## What I learned this week
+
+The big takeaway from week two is that just telling an AI agent what to do isn't productive — it's the system you build around it. The system needs a few key pillars, three explicitly stated in the course:
+
+1. **Regular reflection** — a way to capture what went well, what didn't, and what to change after each session
+2. **Deterministic checks** — scripted, repeatable things a computer can verify without any AI involved
+3. **External AI checks and balances** — a second opinion from a different model, so you're not just asking the same AI to review its own work
+
+And on top of all that, one pillar essential to me is the human side - it still needs human review. Me. Reading the plan, checking the changes, questioning whether it's doing what I actually asked.
+
+## What I built
+
+The first thing I worked on was a **retro skill**. Basically, a skill that I can run at the end of any session to get a structured retrospective written out automatically. The idea is to make reflection and improving a habitual part of every workflow.
+
+I tested this by running it over a session where I'd been working on adding a testing framework to my portfolio site. The retro flagged that I'd been manually asking for a Gemini second opinion during that session and suggested that if I was going to keep doing that, I should automate it. I hadn't implemented the skill for it yet but it was interesting that the retro itself surfaced it as something worth doing.
+
+The second thing I built was a **code review skill**. This was the main deliverable for the week. It runs in three phases: first it runs the deterministic checks (type checking, linting, tests), then it does an LLM review grading A–F across correctness, readability, security, test coverage, and performance, and then it calls an external AI for a second opinion.
+
+As part of my testing of this skill, I planted a deliberate bug into some code I was writing that would cause a false positive in my test. I then ran the review skill over it to see if it would catch it. It did. The code review caught it and so did Gemini independently, impressive.
+
+As a side note I also really enjoyed using Claude Code to turn my plan into GitHub issues and then work through each issue as a task. It made the whole thing feel super efficient and well documented without e having to leave my terminal workspace.
+
+## Challenges
+
+**Context switching.** I found myself writing a list of all the different things I was trying to work on at the same time. The ability to multitask with agents feels like a superpower but it can also be overwhelming.
+
+**Review fatigue.** Reading through AI plans and diffs is draining and I have to be careful not to do this work late at night. My attention span drops and I'm at risk of just approving things I haven't fully understood.
+
+**Trust.** I still have quite low trust in just letting the AI do its thing. I'm hopeful solid systems and a better understanding of how to address security risks with Agentic coding (covered in wekk 3) will help.
+
+## Something that surprised me
+
+I didn't expect agentic coding to feel so much like a systems design problem. I loved the process improvement aspect of this weeks learnings.
+
+It also makes me think differently about what it means to be a junior developer in this environment. There's less need to focus on syntax and more space to think about the bigger picture — what makes code sustainable, what makes a system reliable, what does good software actually look like.
+
+## What's next
+
+A few things I want to explore next:
+
+- **A tutor agent.** I keep finding myself switching to another window to look up what a command actually does or why the agent wants to make a particular change. I'd love a personal agent that understands how I learn and that I can ask questions without losing my flow. This kind of ties in with the opportunity I see to grow as a software developer not just be a driver of AI agents.
+- **My own workflow plugin.** This is probably going to be my first real project for the course — building out a proper plugin based on the workflow I've been developing.
+- **The security module.** Coming up this week and I'm genuinely excited for it. Hopefully it helps me build enough understanding to feel more confident that I'm working as securely as possible with Agents.
